@@ -1,0 +1,134 @@
+@keyframes to-bottom {
+    from {
+        transform: translate(0, -70%);
+    }
+    to {
+        transform: translate(0, 0);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    --primary: #051014;
+}
+
+.header {
+    color: white;
+    background-color: var(--primary, blue);
+    width: 100vw;
+   /* transform: translate(0, -70%);*/
+    animation: to-bottom .4s ease-out forwards;
+}
+.logo-container {
+    display: grid;
+    grid-template-columns: 50px 100px;
+    justify-content: center;
+    padding: 15px 15px 15px 0;
+}
+
+.set-month {
+    display: block;
+    padding: 20px 0;
+}
+.set-month::after {
+    content: "Some Month";
+    color: black;
+}
+
+
+.media-container {
+    display: grid;
+    gap: 1px;
+    grid-template-columns: min-content min-content min-content min-content;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.media-block {
+    background-color: #808080;
+    width: 24.5vw;
+    height: 80px;
+}
+.media {
+    display: block;
+    width: 100%;
+
+    height: auto;
+}
+
+@media only screen and (min-width: 600px){
+    :root {
+        --blockHeight: 100px;
+    }
+}
+
+/* Flexbox gallery
+.month-container {
+    width: 90%;
+}
+.set-month {
+    display: block;
+    padding: 20px 0;
+}
+.set-month::after {
+    content: "Some Month";
+    color: black;
+}
+
+.media-set {
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0 5% 0 5%;
+}
+
+.media-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.media-block {
+    display: inline-block;
+    aspect-ratio: 4/4;
+    width: var(--mediaSize, 75px);
+    height: auto;
+    margin: 1px;
+    background-color: #707070;
+}
+.media {
+    display: block;
+    width: 100%;
+}
+@media only screen and (min-width: 600px) {
+    :root {
+        --mediaSize: 100px;
+    }
+}
+
+/*Inline-block gallery
+.media-container {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    user-select: none;
+}
+.media-block {
+    display: inline-block;
+    aspect-ratio: 4/4;
+    max-width: 160px;
+    min-width: 100px;
+    width: 20%;
+    height: auto;
+    background-color: rgb(112, 112, 112);
+}
+.media {
+    display: block;
+    width: 100%;
+}
+*/
