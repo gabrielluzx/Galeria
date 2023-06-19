@@ -20,7 +20,6 @@
 .header {
     color: white;
     background-color: var(--primary, blue);
-    width: 100vw;
    /* transform: translate(0, -70%);*/
     animation: to-bottom .4s ease-out forwards;
 }
