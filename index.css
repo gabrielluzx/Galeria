@@ -42,14 +42,16 @@
 
 .media-container {
     display: grid;
+    grid-template-columns: repeat(3, calc(33.3% - 2px));
     gap: 1px;
-    grid-template-columns: repeat(3, 33.3%);
     max-width: 1000px;
+    user-select: none;
+    -moz-user-select: none;
     padding-bottom: 5vh;
     margin: 0 auto;
 }
 .media-block {
-    width: 99.1%;/*Remove scroll lateral*/
+    width: 100%;/*Remove scroll lateral*/
     background-color: #000000;
 }
 .media {
@@ -74,13 +76,17 @@
         left: 0;
     }
 }
+@media only screen and (max-height: 600px) {
+    .media-container {
+        grid-template-columns: repeat(6, calc(16.66% - 4px));
+    }
+}
 @media only screen and (min-width: 600px){
     .media-container {
         grid-template-columns: repeat(4, 24.4%);
     }
 }
-
-@media only screen and (min-width: 778px) , (max-height: 600px) {
+@media only screen and (min-width: 778px) {
     .media-container {
         grid-template-columns: repeat(6, 16.55%);
     }
