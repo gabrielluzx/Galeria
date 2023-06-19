@@ -44,14 +44,14 @@
 .media-container {
     display: grid;
     gap: 1px;
-    grid-template-columns: min-content min-content min-content min-content;
+    grid-template-columns: repeat(3,33%);
     max-width: 1000px;
+    padding-bottom: 10px;
     margin: 0 auto;
 }
 .media-block {
+    aspect-ratio: 4/4;
     background-color: #808080;
-    width: 24.5vw;
-    height: 80px;
 }
 .media {
     display: block;
@@ -61,10 +61,19 @@
 }
 
 @media only screen and (min-width: 600px){
-    :root {
-        --blockHeight: 100px;
+    .media-container {
+        grid-template-columns: repeat(4, 24.7%);
     }
 }
+
+@media only screen and (min-width: 778px){
+    .media-container {
+        grid-template-columns: repeat(6, 16%);
+    }
+}
+
+
+
 
 /* Flexbox gallery
 .month-container {
