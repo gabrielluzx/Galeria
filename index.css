@@ -88,7 +88,7 @@
         position: static;
     }
 }
-/*
+
 @supports (display: grid) {
     .logo-container {
         display: -ms-grid;
@@ -124,7 +124,7 @@
             grid-template-columns: repeat(6, calc(16.66% - 1px));
         }
     }
-}*/
+}
 
 @-webkit-keyframes to-bottom {
     from {
