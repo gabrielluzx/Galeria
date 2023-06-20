@@ -49,7 +49,7 @@
 }
 .media-block {
     display: inline-block;
-    width: calc(33% - (0.8px * 2));
+    width: 32.6%;
     margin: 0.8px;
     background-color: #000000;
     pointer-events: none;
@@ -79,7 +79,6 @@
         padding-bottom: 16.9%;
     }
 }
-
 @supports (aspect-ratio: 4/4){
     .media-block {
         aspect-ratio: 4/4;
@@ -89,7 +88,7 @@
         position: static;
     }
 }
-
+/*
 @supports (display: grid) {
     .logo-container {
         display: -ms-grid;
@@ -125,7 +124,7 @@
             grid-template-columns: repeat(6, calc(16.66% - 1px));
         }
     }
-}
+}*/
 
 @-webkit-keyframes to-bottom {
     from {
